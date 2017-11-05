@@ -72,7 +72,7 @@ class Boss implements ClothesFactory {
 
 public interface ClothesFactory {
     
-     public enum manufacturers {
+    public enum manufacturers {
         ADIDAS("Adidas"), BOSS("Boss");
         
         private final String name;
@@ -91,7 +91,7 @@ public interface ClothesFactory {
             IllegalArgumentException, 
             InvocationTargetException
     {
-        Class factory_cls = Class.forName("suma_abstractfactory." + manufacturer.toString());
+        Class factory_cls = Class.forName("abstractfactory." + manufacturer.toString());
         ClothesFactory factory = (ClothesFactory)factory_cls.newInstance();
         Method factory_method = factory_cls.getMethod("create" + garment.toString());
         return (Garment)factory_method.invoke(factory);
