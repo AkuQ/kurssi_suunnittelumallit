@@ -8,7 +8,7 @@ public abstract class Pokemon {
         public void makeSound();
         public State evolve();
     }
-    State state;
+    private State state;
     
     protected Pokemon(State state) {
         this.state = state;
