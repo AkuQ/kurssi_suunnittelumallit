@@ -26,7 +26,7 @@ public abstract class Pokemon {
         return this.state.getAttack();
     }
     
-    public void evolve() {
+    public final void evolve() {
         this.state = this.state.evolve();
     }
 }
