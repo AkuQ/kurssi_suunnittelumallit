@@ -14,19 +14,8 @@ public abstract class Pokemon {
         this.state = state;
     }
     
-    public final String getSpecies(){
-        return this.state.getSpecies();
-    }
-    
-    public final void makeSound(){
-        this.state.makeSound();
-    }
-    
-    public final String getAttack(){
-        return this.state.getAttack();
-    }
-    
-    public final void evolve() {
-        this.state = this.state.evolve();
-    }
+    public final String getSpecies() { return this.state.getSpecies(); }
+    public final String getAttack() { return this.state.getAttack(); }
+    public final void makeSound() { this.state.makeSound(); }
+    public final void evolve() { this.state = this.state.evolve(); }
 }
