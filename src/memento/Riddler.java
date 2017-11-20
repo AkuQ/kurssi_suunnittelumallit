@@ -9,7 +9,7 @@ public class Riddler {
         }
     }
     
-    public Memento joinGame(Client c) {
+    public Object joinGame(Client c) {
         int rand = 1 + (int)(Math.random() * 10.0);
         return new Memento(rand);
     }
